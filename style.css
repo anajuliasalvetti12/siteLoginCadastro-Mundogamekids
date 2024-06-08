@@ -1,0 +1,158 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@900&display=swap");
+
+* {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  font-family: "Quicksand", sans-serif; 
+}
+
+body {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
+  background: #000; 
+  width: 100%; 
+}
+
+.logo {
+  width: 150px; 
+  margin-bottom: 20px; 
+  border-radius: 18px;
+  margin-bottom: 5px;
+}
+
+.container {
+  position: relative; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column; 
+  background-image: url('fundo.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  padding: 40px; 
+  border: 2px solid #9ca3ab; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.container::before {
+  content: ""; 
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); 
+  border-radius: 10px; 
+  z-index: 0; 
+}
+
+.login, .logo {
+  position: relative; 
+  z-index: 1; 
+}
+
+
+.login {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column; 
+  gap: 20px; 
+}
+
+.login h2 {
+  font-size: 2em;
+  color: #9ca3ab; 
+}
+
+.login .inputBx {
+  width: 100%; 
+}
+
+.login .inputBx label {
+  display: block;
+  color: #9ca3ab;
+  margin-bottom: 5px; 
+}
+
+.login .inputBx input {
+  width: 100%;
+  padding: 12px 20px; 
+  background: linear-gradient(to bottom, #555, #000);
+  border: 2px solid #9ca3ab; 
+  border-radius: 10px; 
+  font-size: 1.2em; 
+  color: #fff; 
+}
+
+.login .inputBx input::placeholder {
+  color: rgba(255, 255, 255, 0.75); 
+}
+
+.button {
+  width: 100%; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.button button {
+  width: 100%;
+  padding: 12px 20px;
+  background: linear-gradient(to right, #000, #555); 
+  border: none;
+  border-radius: 10px; 
+  font-size: 1.2em;
+  color: #000; 
+  font-weight: 900;
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.button button:hover {
+  background: linear-gradient(to right, #555, #000); 
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+}
+
+.social-icons i {
+  font-size: 2em; 
+  color: #9ca3ab; 
+  cursor: pointer; 
+  transition: color 0.3s ease; 
+}
+
+.social-icons i:hover {
+  color: #896bb6; 
+}
+
+.text-center {
+  text-align: center;
+  color: #9ca3ab; 
+}
+
+.text-center a {
+  color: #9ca3ab; 
+  text-decoration: none; 
+}
+
+.text-center a:hover {
+  text-decoration: underline; 
+}
+
+.social-login-text {
+  font-size: 0.8em; 
+  color: #9ca3ab; 
+}
+
