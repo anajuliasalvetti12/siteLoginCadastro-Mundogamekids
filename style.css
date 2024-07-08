@@ -1,158 +1,167 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@900&display=swap");
-
+/* O * significa "todos os elementos" na página */
 * {
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
-  font-family: "Quicksand", sans-serif; 
+  margin: 0; /* Remove o espaço em volta de todos os elementos */
+  padding: 0; /* Remove o espaço dentro de todos os elementos */
+  box-sizing: border-box; /* Faz com que as bordas e o preenchimento não aumentem o tamanho dos elementos */
+  font-family: "Quicksand", sans-serif; /* Define uma fonte legal para o texto */
 }
 
+/* Estilo para o corpo da página */
 body {
-  display: flex; 
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center; 
-  min-height: 100vh; 
-  background: #000; 
-  width: 100%; 
+  display: flex; /* Faz os elementos dentro do corpo se organizarem em linha ou coluna */
+  flex-direction: column; /* Organiza os elementos em uma coluna (um embaixo do outro) */
+  justify-content: center; /* Coloca os elementos no centro verticalmente */
+  align-items: center; /* Coloca os elementos no centro horizontalmente */
+  min-height: 100vh; /* Faz o corpo ter no mínimo a altura da tela inteira */
+  background: #000; /* Coloca o fundo preto */
+  width: 100%; /* Faz o corpo ter 100% da largura da tela */
 }
 
+/* Estilo para a logo */
 .logo {
-  width: 150px; 
-  margin-bottom: 20px; 
-  border-radius: 18px;
-  margin-bottom: 5px;
+  width: 150px; /* Define a largura da logo */
+  margin-bottom: 20px; /* Espaço abaixo da logo (20px) */
+  border-radius: 18px; /* Arredonda os cantos da logo */
+  margin-bottom: 5px; /* Espaço abaixo da logo (5px) */
 }
 
+/* Estilo para o container */
 .container {
-  position: relative; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  flex-direction: column; 
-  background-image: url('fundo.png'); 
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-  padding: 40px; 
-  border: 2px solid #9ca3ab; 
-  border-radius: 10px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  position: relative; /* Define a posição em relação ao elemento pai */
+  display: flex; /* Faz os elementos dentro do container se organizarem em linha ou coluna */
+  justify-content: center; /* Coloca os elementos no centro horizontalmente */
+  align-items: center; /* Coloca os elementos no centro verticalmente */
+  flex-direction: column; /* Organiza os elementos em uma coluna (um embaixo do outro) */
+  background-image: url('fundo.png'); /* Coloca uma imagem de fundo */
+  background-size: cover; /* Faz a imagem de fundo cobrir todo o container */
+  background-position: center; /* Centraliza a imagem de fundo */
+  background-repeat: no-repeat; /* Não repete a imagem de fundo */
+  padding: 40px; /* Espaço dentro do container (40px) */
+  border: 2px solid #9ca3ab; /* Coloca uma borda de 2px com cor #9ca3ab */
+  border-radius: 10px; /* Arredonda os cantos do container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave ao redor do container */
 }
 
+/* Este bloco cria uma camada semi-transparente sobre o conteúdo do container */
 .container::before {
-  content: ""; 
-  position: absolute; 
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); 
-  border-radius: 10px; 
-  z-index: 0; 
-}
+    content: "";  /* Adiciona conteúdo vazio (necessário para pseudoelementos) */
+    position: absolute;  /* Posiciona absolutamente em relação ao container pai */
+    top: 0;  /* Alinha o topo com o topo do container */
+    left: 0;  /* Alinha a esquerda com a borda esquerda do container */
+    right: 0;  /* Alinha a direita com a borda direita do container */
+    bottom: 0;  /* Alinha o fundo com a borda inferior do container */
+    background-color: rgba(0, 0, 0, 0.5);  /* Cor do fundo semi-transparente */
+    border-radius: 10px;  /* Cantos arredondados */
+    z-index: 0;  /* Coloca atrás de outros elementos */
+  }
 
+/* Estes elementos são importantes para o login e o logo */
 .login, .logo {
-  position: relative; 
-  z-index: 1; 
-}
+    position: relative;  /* Posicionamento relativo para sobrepor corretamente */
+    z-index: 1;  /* Coloca na frente do fundo semi-transparente */
+  }
 
-
+/* Área de login */
 .login {
-  display: flex; 
-  justify-content: center; 
-  align-items: center;
-  flex-direction: column; 
-  gap: 20px; 
-}
-
-.login h2 {
-  font-size: 2em;
-  color: #9ca3ab; 
-}
-
+    display: flex;  /* Mostra em formato de linha */
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;  /* Centraliza verticalmente */
+    flex-direction: column;  /* Organiza em coluna */
+    gap: 20px;  /* Espaço entre os elementos */
+  }
+  
+  .login h2 {
+    font-size: 2em;  /* Tamanho do texto */
+    color: #9ca3ab;  /* Cor do texto */
+  }
+  
+/* Caixa de entrada de texto */
 .login .inputBx {
-  width: 100%; 
+  width: 100%;  /* Largura total */
 }
 
 .login .inputBx label {
-  display: block;
-  color: #9ca3ab;
-  margin-bottom: 5px; 
+  display: block;  /* Mostra como bloco para espaçamento */
+  color: #9ca3ab;  /* Cor do texto */
+  margin-bottom: 5px;  /* Espaço abaixo do texto */
 }
 
 .login .inputBx input {
-  width: 100%;
-  padding: 12px 20px; 
-  background: linear-gradient(to bottom, #555, #000);
-  border: 2px solid #9ca3ab; 
-  border-radius: 10px; 
-  font-size: 1.2em; 
-  color: #fff; 
+  width: 100%;  /* Largura total */
+  padding: 12px 20px;  /* Espaçamento dentro da caixa */
+  background: linear-gradient(to bottom, #555, #000);  /* Gradiente de fundo */
+  border: 2px solid #9ca3ab;  /* Borda com cor */
+  border-radius: 10px;  /* Cantos arredondados */
+  font-size: 1.2em;  /* Tamanho do texto */
+  color: #fff;  /* Cor do texto */
 }
 
 .login .inputBx input::placeholder {
-  color: rgba(255, 255, 255, 0.75); 
+  color: rgba(255, 255, 255, 0.747);  /* Cor do texto de espaço reservado */
 }
-
+ 
+* Botão de login */
 .button {
-  width: 100%; 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
+  width: 100%;  /* Largura total */
+  display: flex;  /* Mostra em formato de linha */
+  justify-content: center;  /* Centraliza horizontalmente */
+  align-items: center;  /* Centraliza verticalmente */
 }
 
 .button button {
-  width: 100%;
-  padding: 12px 20px;
-  background: linear-gradient(to right, #000, #555); 
-  border: none;
-  border-radius: 10px; 
-  font-size: 1.2em;
-  color: #000; 
-  font-weight: 900;
-  cursor: pointer; 
-  transition: background-color 0.3s ease; 
+  width: 100%;  /* Largura total */
+  padding: 12px 20px;  /* Espaçamento dentro do botão */
+  background: linear-gradient(to right, #000, #555);  /* Gradiente de fundo */
+  border: none;  /* Sem borda */
+  border-radius: 10px;  /* Cantos arredondados */
+  font-size: 1.2em;  /* Tamanho do texto */
+  color: #000;  /* Cor do texto */
+  font-weight: 900;  /* Espessura da fonte */
+  cursor: pointer;  /* Cursor de ponteiro */
+  transition: background-color 0.3s ease;  /* Transição suave de cor de fundo */
 }
 
 .button button:hover {
-  background: linear-gradient(to right, #555, #000); 
+  background: linear-gradient(to right, #555, #000);  /* Gradiente de fundo ao passar o mouse */
 }
 
+/* Ícones sociais */
 .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 20px; 
+  display: flex;  /* Mostra em formato de linha */
+  justify-content: center;  /* Centraliza horizontalmente */
+  gap: 20px;  /* Espaço entre os ícones */
 }
 
 .social-icons i {
-  font-size: 2em; 
-  color: #9ca3ab; 
-  cursor: pointer; 
-  transition: color 0.3s ease; 
+  font-size: 2em;  /* Tamanho do ícone */
+  color: #9ca3ab;  /* Cor do ícone */
+  cursor: pointer;  /* Cursor de ponteiro */
+  transition: color 0.3s ease;  /* Transição suave de cor */
 }
 
 .social-icons i:hover {
-  color: #896bb6; 
+  color: #896bb6;  /* Cor do ícone ao passar o mouse */
 }
 
+/* Texto centralizado */
 .text-center {
-  text-align: center;
-  color: #9ca3ab; 
+  text-align: center;  /* Centraliza o texto */
+  color: #9ca3ab;  /* Cor do texto */
 }
 
 .text-center a {
-  color: #9ca3ab; 
-  text-decoration: none; 
+  color: #9ca3ab;  /* Cor do link */
+  text-decoration: none;  /* Sem sublinhado */
 }
 
 .text-center a:hover {
-  text-decoration: underline; 
+  text-decoration: underline;  /* Sublinhado ao passar o mouse */
 }
 
+/* Texto menor abaixo dos ícones sociais */
 .social-login-text {
-  font-size: 0.8em; 
-  color: #9ca3ab; 
+  font-size: 0.8em;  /* Tamanho menor do texto */
+  color: #9ca3ab;  /* Cor do texto */
 }
-

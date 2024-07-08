@@ -1,16 +1,51 @@
-<!DOCTYPE html> <!-- Esta linha indica que este é um documento HTML5 -->
-<html lang="en"> <!-- Aqui dizemos que a página está em inglês -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <!-- Define a forma como o texto será mostrado -->
-    <meta charset="UTF-8"> 
-     <!-- Aqui você define o título da página que aparece na aba do navegador -->
-    <title>Login</title>
-    <!-- Este link conecta o arquivo de estilos CSS para deixar a página bonita -->
-    <link rel="stylesheet" href="style.css"> 
-    <!-- Este link conecta a biblioteca FontAwesome para incluir ícones na página -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    ... <!-- Aqui é onde você coloca todo o conteúdo da página, como formulários, imagens, textos, etc. -->
+    <div class="container">
+
+        <img src="logo.jpeg" alt="Logo" class="logo">
+
+        <div class="login">
+            
+            <h2>Faça Login</h2>
+
+            <div class="inputBx">
+                <label for="username">e-mail </label>
+                <input type="text" id="username" placeholder="digite seu e-mail"/>
+               </div>
+
+               <div class="inputBx">
+                <label for="username">e-mail </label>
+          <input type="password" id="password" placeholder="digite seu senha"/>
+               </div>
+               
+       <div class="button">
+        <button id="login_button">login</button>
+       </div>
+
+        <p class="text-center">ou use suas redes sociais </p>
+
+        <div class="social-icons">
+            <i class="fa-brands fa-google"></i>
+        </div>
+        
+        <p class="text-center">nao tem conta? <a href="cadastro.html">registre-se</a></p>
+        <p class="text-center"> <a href="#">esqueceu a senha?</a></p>
+
+        </div>
+<h2 id="concluido"></h2>
+<script type="module" src="login.js"></script></script>
+
+    </div>
+
+    
 </body>
 </html>
+
+
