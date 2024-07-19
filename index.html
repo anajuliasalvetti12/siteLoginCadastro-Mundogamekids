@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Login</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
-    <div class="container">
-
+    <div class="container" id="container">
+        <!-- Aqui está a logo do site -->
         <img src="logo.jpeg" alt="Logo" class="logo">
-
+        
         <div class="login">
-            
+            <!-- Título da seção de login -->
             <h2>Faça Login</h2>
 
+            <!-- Campo para digitar o e-mail -->
             <div class="inputBx">
-                <label for="username">e-mail </label>
-                <input type="text" id="username" placeholder="digite seu e-mail"/>
-               </div>
+                <label for="username">E-mail</label>
+                <input type="text" id="username" placeholder="Digite seu e-mail" />
+            </div>
 
-               <div class="inputBx">
-                <label for="username">e-mail </label>
-          <input type="password" id="password" placeholder="digite seu senha"/>
-               </div>
-               
-       <div class="button">
-        <button id="login_button">login</button>
-       </div>
+            <!-- Campo para digitar a senha -->
+            <div class="inputBx">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Digite sua senha" />
+            </div>
 
-        <p class="text-center">ou use suas redes sociais </p>
-
-        <div class="social-icons">
-            <i class="fa-brands fa-google"></i>
+            <!-- Botão de login -->
+            <div class="button">
+                <button id="login_button">Login</button>
+            </div>
+            
+            <!-- Texto para indicar login com redes sociais -->
+            <p class="text-center">ou use suas redes sociais</p>
+            
+            <!-- Ícones para login com redes sociais -->
+            <div class="social-icons">
+                <i class="fab fa-github"></i>
+                <i class="fab fa-google"></i>
+                <i class="fab fa-facebook"></i>
+            </div>
+            
+            <!-- Link para registrar-se se não tiver uma conta -->
+            <p class="text-center">Não tem conta? <a href="cadastro.html">Registre-se</a></p>
+            
+            <!-- Link para recuperar a senha esquecida -->
+            <p class="text-center"><a href="#">Esqueceu a senha?</a></p>
         </div>
-        
-        <p class="text-center">nao tem conta? <a href="cadastro.html">registre-se</a></p>
-        <p class="text-center"> <a href="#">esqueceu a senha?</a></p>
-
-        </div>
-<h2 id="concluido"></h2>
-<script type="module" src="login.js"></script></script>
-
     </div>
-
     
+    <!-- Mensagem de resultado do login -->
+    <h2 id="concluido"></h2>
+    
+    <!-- Script de login -->
+    <script type="module" src="login.js"></script>
 </body>
+
 </html>
-
-

@@ -46,37 +46,37 @@ body {
 
 /* Este bloco cria uma camada semi-transparente sobre o conteúdo do container */
 .container::before {
-    content: "";  /* Adiciona conteúdo vazio (necessário para pseudoelementos) */
-    position: absolute;  /* Posiciona absolutamente em relação ao container pai */
-    top: 0;  /* Alinha o topo com o topo do container */
-    left: 0;  /* Alinha a esquerda com a borda esquerda do container */
-    right: 0;  /* Alinha a direita com a borda direita do container */
-    bottom: 0;  /* Alinha o fundo com a borda inferior do container */
-    background-color: rgba(0, 0, 0, 0.5);  /* Cor do fundo semi-transparente */
-    border-radius: 10px;  /* Cantos arredondados */
-    z-index: 0;  /* Coloca atrás de outros elementos */
-  }
+  content: "";  /* Adiciona conteúdo vazio (necessário para pseudoelementos) */
+  position: absolute;  /* Posiciona absolutamente em relação ao container pai */
+  top: 0;  /* Alinha o topo com o topo do container */
+  left: 0;  /* Alinha a esquerda com a borda esquerda do container */
+  right: 0;  /* Alinha a direita com a borda direita do container */
+  bottom: 0;  /* Alinha o fundo com a borda inferior do container */
+  background-color: rgba(0, 0, 0, 0.5);  /* Cor do fundo semi-transparente */
+  border-radius: 10px;  /* Cantos arredondados */
+  z-index: 0;  /* Coloca atrás de outros elementos */
+}
 
 /* Estes elementos são importantes para o login e o logo */
 .login, .logo {
-    position: relative;  /* Posicionamento relativo para sobrepor corretamente */
-    z-index: 1;  /* Coloca na frente do fundo semi-transparente */
-  }
+  position: relative;  /* Posicionamento relativo para sobrepor corretamente */
+  z-index: 1;  /* Coloca na frente do fundo semi-transparente */
+}
 
 /* Área de login */
 .login {
-    display: flex;  /* Mostra em formato de linha */
-    justify-content: center;  /* Centraliza horizontalmente */
-    align-items: center;  /* Centraliza verticalmente */
-    flex-direction: column;  /* Organiza em coluna */
-    gap: 20px;  /* Espaço entre os elementos */
-  }
-  
-  .login h2 {
-    font-size: 2em;  /* Tamanho do texto */
-    color: #9ca3ab;  /* Cor do texto */
-  }
-  
+  display: flex;  /* Mostra em formato de linha */
+  justify-content: center;  /* Centraliza horizontalmente */
+  align-items: center;  /* Centraliza verticalmente */
+  flex-direction: column;  /* Organiza em coluna */
+  gap: 20px;  /* Espaço entre os elementos */
+}
+
+.login h2 {
+  font-size: 2em;  /* Tamanho do texto */
+  color: #9ca3ab;  /* Cor do texto */
+}
+
 /* Caixa de entrada de texto */
 .login .inputBx {
   width: 100%;  /* Largura total */
@@ -99,10 +99,10 @@ body {
 }
 
 .login .inputBx input::placeholder {
-  color: rgba(255, 255, 255, 0.747);  /* Cor do texto de espaço reservado */
+  color: rgba(255, 255, 255, 0.75);  /* Cor do texto de espaço reservado */
 }
- 
-* Botão de login */
+
+/* Botão de login */
 .button {
   width: 100%;  /* Largura total */
   display: flex;  /* Mostra em formato de linha */

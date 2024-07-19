@@ -10,40 +10,56 @@
 
 <body>
     <div class="container">
+        <!-- Aqui está a logo do site -->
         <img src="logo.jpeg" alt="Logo" class="logo">
 
         <div class="login">
+            <!-- Título da seção de cadastro -->
             <h2>Cadastre-se</h2>
 
-           <div class="indexBx">
-            <label for="username">E-mail</label>
-            <input type="text" id="username" placeholder="Digite seu e-mail"/>
-           </div>
-           
-           <div class="inputBx">
-            <label for="password">senha</label>
-            <input type="password" id="password" placeholder="digite sua senha "/>
-           </div>
-           
-           <div class="inputBx">
-            <label for=" confirm password">confirmar senha</label>
-            <input type="password" id="confirm_password" placeholder="confirme sua senha "/>
-           </div>
-           
+            <!-- Campo para digitar o e-mail -->
+            <div class="inputBx">
+                <label for="username">E-mail</label>
+                <input type="text" id="username" placeholder="Digite seu e-mail" />
+            </div>
 
+            <!-- Campo para digitar a senha -->
+            <div class="inputBx">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Digite sua senha" />
+            </div>
+
+            <!-- Campo para confirmar a senha -->
+            <div class="inputBx">
+                <label for="confirm_password">Confirmar Senha</label>
+                <input type="password" id="confirm_password" placeholder="Confirme sua senha" />
+            </div>
+
+            <!-- Botão de cadastro -->
             <div class="button">
                 <button id="login_button">Cadastre-se</button>
             </div>
 
+            <!-- Link para fazer login se já tiver uma conta -->
             <p class="text-center">Já possui conta? <a href="index.html">Faça login</a></p>
+            
+            <!-- Texto para indicar login social -->
             <p class="text-center social-login-text">ou faça login na rede social</p>
 
+            <!-- Ícones para login com redes sociais -->
             <div class="social-icons">
-     
+                <i class="fab fa-github"></i>
                 <i class="fab fa-google"></i>
-           
+                <i class="fab fa-facebook"></i>
             </div>
         </div>
     </div>
+
+    <!-- Mensagem de resultado do cadastro -->
     <h2 id="resultado"></h2>
-    <script type="module" src="cadastro.js
+    
+    <!-- Script de cadastro -->
+    <script type="module" src="cadastro.js"></script>
+</body>
+
+</html>
